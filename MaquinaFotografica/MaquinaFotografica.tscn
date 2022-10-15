@@ -5,7 +5,7 @@
 
 [sub_resource type="RectangleShape2D" id=1]
 
-[node name="MaquinaFotográfica" type="Node2D"]
+[node name="MaquinaFotografica" type="Node2D"]
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
