@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Fases/Jogo/Jogo.gd" type="Script" id=1]
+[ext_resource path="res://Assets/icon.png" type="Texture" id=2]
+[ext_resource path="res://MaquinaFotografica/MaquinaFotografica.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Interface/InterfaceJogo.tscn" type="PackedScene" id=4]
+
+[sub_resource type="World" id=1]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 32, 32 )
+
+[node name="Jogo" type="Node"]
+script = ExtResource( 1 )
+
+[node name="ViewportJogo" type="ViewportContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="MundoJogo" type="Viewport" parent="ViewportJogo"]
+size = Vector2( 2480, 1200 )
+world = SubResource( 1 )
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="MaquinaFotográfica" parent="ViewportJogo/MundoJogo" instance=ExtResource( 3 )]
+tamanho_foto = Vector2( 150, 90 )
+
+[node name="Objeto" type="Area2D" parent="ViewportJogo/MundoJogo"]
+position = Vector2( 337, 263 )
+collision_mask = 0
+monitoring = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ViewportJogo/MundoJogo/Objeto"]
+shape = SubResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="ViewportJogo/MundoJogo/Objeto"]
+texture = ExtResource( 2 )
+
+[node name="Interface" parent="." instance=ExtResource( 4 )]
+
+[connection signal="fitas_restantes_atualizada" from="." to="Interface/FitasRestantes" method="atualizar_fitas_restantes"]
+[connection signal="foto_tirada" from="ViewportJogo/MundoJogo/MaquinaFotográfica" to="." method="_on_MaquinaFotogrfica_foto_tirada"]
+[connection signal="foto_tirada" from="ViewportJogo/MundoJogo/MaquinaFotográfica" to="Interface/Flash" method="_on_MaquinaFotogrfica_foto_tirada"]
+
+[editable path="Interface"]
