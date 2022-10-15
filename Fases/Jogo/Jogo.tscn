@@ -1,14 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Fases/Jogo/Jogo.gd" type="Script" id=1]
-[ext_resource path="res://Assets/icon.png" type="Texture" id=2]
+[ext_resource path="res://Animais/Animal.tscn" type="PackedScene" id=2]
 [ext_resource path="res://MaquinaFotografica/MaquinaFotografica.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Interface/InterfaceJogo.tscn" type="PackedScene" id=4]
 
 [sub_resource type="World" id=1]
-
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 32, 32 )
 
 [node name="Jogo" type="Node"]
 script = ExtResource( 1 )
@@ -26,19 +23,14 @@ render_target_update_mode = 3
 [node name="MaquinaFotografica" parent="ViewportJogo/MundoJogo" instance=ExtResource( 3 )]
 tamanho_foto = Vector2( 150, 90 )
 
-[node name="Objeto" type="Area2D" parent="ViewportJogo/MundoJogo"]
-position = Vector2( 337, 263 )
-collision_mask = 0
-monitoring = false
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Animal" parent="ViewportJogo/MundoJogo" instance=ExtResource( 2 )]
+position = Vector2( 179, 120 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ViewportJogo/MundoJogo/Objeto"]
-shape = SubResource( 3 )
+[node name="Animal2" parent="ViewportJogo/MundoJogo" instance=ExtResource( 2 )]
+position = Vector2( 495, 289 )
 
-[node name="Sprite" type="Sprite" parent="ViewportJogo/MundoJogo/Objeto"]
-texture = ExtResource( 2 )
+[node name="Animal3" parent="ViewportJogo/MundoJogo" instance=ExtResource( 2 )]
+position = Vector2( 114, 306 )
 
 [node name="Interface" parent="." instance=ExtResource( 4 )]
 
