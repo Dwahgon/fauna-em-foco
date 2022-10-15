@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Gamejam-larva"
-config/icon="res://icon.png"
+config/icon="res://Assets/icon.png"
 
 [gui]
 
