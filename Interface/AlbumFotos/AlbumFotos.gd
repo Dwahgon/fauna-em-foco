@@ -7,6 +7,7 @@ const NODE_BOTAO_CONTINUAR = "%BotaoContinuar"
 const NODE_GRADE_FOTOS = "%GradeFotos"
 const NODE_PONTUACAO = "%Pontuacao"
 const CAMINHO_CENA_JOGO = "res://Fases/Jogo/Jogo.tscn"
+const CAMINHO_MENU_INICIAL = "res://Interface/MenuInicial/MenuInicial.tscn"
 const CENA_POLAROID_UI = preload("res://Interface/AlbumFotos/PolaroidUI.tscn")
 
 var id_animais = []
@@ -67,3 +68,7 @@ func _on_BotaoContinuar_pressed():
 
 func _on_BotaoIrParaJogo_pressed():
 	var _err = get_tree().change_scene(CAMINHO_CENA_JOGO)
+
+
+func _on_BotaoIrMenuPrincipal_pressed():
+	var _err = get_tree().change_scene(CAMINHO_MENU_INICIAL)
