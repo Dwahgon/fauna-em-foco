@@ -17,6 +17,7 @@ func _ready():
 	emit_signal("fitas_restantes_atualizada", fitas_restantes)
 	Globais.fotos_tiradas.clear()
 	_atualizar_nome_foto()
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 
 
 func _on_MaquinaFotogrfica_foto_tirada(nome_imagem, _objetos_na_foto):

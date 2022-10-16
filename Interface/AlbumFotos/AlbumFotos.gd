@@ -9,13 +9,12 @@ const NODE_PONTUACAO = "%Pontuacao"
 const CAMINHO_CENA_JOGO = "res://Fases/Jogo/Jogo.tscn"
 const CENA_POLAROID_UI = preload("res://Interface/AlbumFotos/PolaroidUI.tscn")
 
-
 var id_animais = []
 var pagina_atual = -1
 
-
 func _ready():
 	get_node(NODE_PONTUACAO).text = "Sua pontuacao: %d" % Globais.calcular_pontuacao()
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	
 	for elemento in Globais.fotos_tiradas:
 		var animais = elemento["animais"]
