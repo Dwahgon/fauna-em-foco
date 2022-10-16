@@ -1,0 +1,281 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Interface/MenuInicial/Fade.gd" type="Script" id=1]
+[ext_resource path="res://Interface/MenuInicial/MenuInicial.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.289062, 0.289062, 0.289062, 1 )
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "fade_in"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "fade_out"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="MenuInicial" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="MenuPrincipal" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="MargemTitulo" type="MarginContainer" parent="MenuPrincipal"]
+margin_right = 1024.0
+margin_bottom = 298.0
+size_flags_vertical = 3
+custom_constants/margin_right = 30
+custom_constants/margin_top = 30
+custom_constants/margin_left = 30
+custom_constants/margin_bottom = 30
+
+[node name="Label" type="Label" parent="MenuPrincipal/MargemTitulo"]
+margin_left = 30.0
+margin_top = 142.0
+margin_right = 994.0
+margin_bottom = 156.0
+text = "Titulo do jogo aqui"
+align = 1
+
+[node name="MargemBotoes" type="MarginContainer" parent="MenuPrincipal"]
+margin_top = 302.0
+margin_right = 1024.0
+margin_bottom = 600.0
+size_flags_vertical = 3
+custom_constants/margin_right = 300
+custom_constants/margin_left = 300
+custom_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuPrincipal/MargemBotoes"]
+margin_left = 300.0
+margin_right = 724.0
+margin_bottom = 198.0
+alignment = 1
+
+[node name="BotaoJogar" type="Button" parent="MenuPrincipal/MargemBotoes/VBoxContainer"]
+margin_right = 424.0
+margin_bottom = 47.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Jogar"
+
+[node name="Separador" type="Control" parent="MenuPrincipal/MargemBotoes/VBoxContainer"]
+margin_top = 51.0
+margin_right = 424.0
+margin_bottom = 71.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="BotaoCreditos" type="Button" parent="MenuPrincipal/MargemBotoes/VBoxContainer"]
+margin_top = 75.0
+margin_right = 424.0
+margin_bottom = 122.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Creditos"
+
+[node name="Separador2" type="Control" parent="MenuPrincipal/MargemBotoes/VBoxContainer"]
+margin_top = 126.0
+margin_right = 424.0
+margin_bottom = 146.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="BotaoSair" type="Button" parent="MenuPrincipal/MargemBotoes/VBoxContainer"]
+margin_top = 150.0
+margin_right = 424.0
+margin_bottom = 198.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Sair"
+
+[node name="MenuCreditos" type="Panel" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuCreditos"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="MargemTitulo" type="MarginContainer" parent="MenuCreditos/VBoxContainer"]
+margin_right = 1024.0
+margin_bottom = 114.0
+custom_constants/margin_right = 30
+custom_constants/margin_top = 30
+custom_constants/margin_left = 30
+custom_constants/margin_bottom = 30
+
+[node name="Panel" type="Panel" parent="MenuCreditos/VBoxContainer/MargemTitulo"]
+margin_left = 30.0
+margin_top = 30.0
+margin_right = 994.0
+margin_bottom = 84.0
+custom_styles/panel = SubResource( 4 )
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuCreditos/VBoxContainer/MargemTitulo"]
+margin_left = 30.0
+margin_top = 30.0
+margin_right = 994.0
+margin_bottom = 84.0
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="MenuCreditos/VBoxContainer/MargemTitulo/MarginContainer"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 944.0
+margin_bottom = 34.0
+text = "Creditos"
+align = 1
+
+[node name="MargemConteudo" type="MarginContainer" parent="MenuCreditos/VBoxContainer"]
+margin_top = 118.0
+margin_right = 1024.0
+margin_bottom = 506.0
+size_flags_vertical = 3
+custom_constants/margin_right = 100
+custom_constants/margin_left = 100
+custom_constants/margin_bottom = 30
+
+[node name="Panel" type="Panel" parent="MenuCreditos/VBoxContainer/MargemConteudo"]
+margin_left = 100.0
+margin_right = 924.0
+margin_bottom = 358.0
+custom_styles/panel = SubResource( 4 )
+
+[node name="MargemCreditos" type="MarginContainer" parent="MenuCreditos/VBoxContainer/MargemConteudo"]
+margin_left = 100.0
+margin_right = 924.0
+margin_bottom = 358.0
+custom_constants/margin_right = 30
+custom_constants/margin_top = 30
+custom_constants/margin_left = 30
+custom_constants/margin_bottom = 30
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MenuCreditos/VBoxContainer/MargemConteudo/MargemCreditos"]
+margin_left = 30.0
+margin_top = 30.0
+margin_right = 794.0
+margin_bottom = 328.0
+text = "Ana Eloina Kraus:
+	- Arte
+
+Geórgia Betinna:
+	- Arte
+
+Kawan Weege
+	- Programação; Arte de algumas botões
+
+Luciano Wayand:
+	- Programação; Ideia Original
+	
+Jezreel Moraes
+	- Ideias"
+
+[node name="MargemBotoes" type="MarginContainer" parent="MenuCreditos/VBoxContainer"]
+margin_top = 510.0
+margin_right = 1024.0
+margin_bottom = 600.0
+custom_constants/margin_right = 30
+custom_constants/margin_left = 30
+custom_constants/margin_bottom = 30
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuCreditos/VBoxContainer/MargemBotoes"]
+margin_left = 30.0
+margin_right = 994.0
+margin_bottom = 60.0
+alignment = 1
+
+[node name="VoltarCreditos" type="Button" parent="MenuCreditos/VBoxContainer/MargemBotoes/HBoxContainer"]
+margin_left = 432.0
+margin_right = 532.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 100, 60 )
+text = "Voltar"
+
+[node name="AvisoEpilepsia" type="Panel" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="CenterContainer" type="CenterContainer" parent="AvisoEpilepsia"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TextoAviso" type="Label" parent="AvisoEpilepsia/CenterContainer"]
+margin_left = 183.0
+margin_top = 267.0
+margin_right = 841.0
+margin_bottom = 332.0
+text = "AVISO: LEIA ANTES DE JOGAR!
+
+Esse jogo não é indicado para pessoas com epilepsia por conter efeitos que podem causar convulsões,
+como efeitos de flash."
+align = 1
+
+[node name="TimerAvisoEpilepsia" type="Timer" parent="AvisoEpilepsia"]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="Fade" type="Panel" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Fade"]
+anims/RESET = SubResource( 1 )
+anims/fade_in = SubResource( 2 )
+anims/fade_out = SubResource( 3 )
+
+[connection signal="pressed" from="MenuPrincipal/MargemBotoes/VBoxContainer/BotaoJogar" to="." method="_on_BotaoJogar_pressed"]
+[connection signal="pressed" from="MenuPrincipal/MargemBotoes/VBoxContainer/BotaoCreditos" to="." method="_on_BotaoCreditos_pressed"]
+[connection signal="pressed" from="MenuPrincipal/MargemBotoes/VBoxContainer/BotaoSair" to="." method="_on_BotaoSair_pressed"]
+[connection signal="pressed" from="MenuCreditos/VBoxContainer/MargemBotoes/HBoxContainer/VoltarCreditos" to="." method="_on_VoltarCreditos_pressed"]
+[connection signal="timeout" from="AvisoEpilepsia/TimerAvisoEpilepsia" to="." method="_on_TimerAvisoEpilepsia_timeout"]
+[connection signal="animation_finished" from="Fade/AnimationPlayer" to="Fade" method="_on_AnimationPlayer_animation_finished"]
