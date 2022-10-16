@@ -30,13 +30,17 @@ func _ready():
 	if id_animais.size() > 0:
 		pagina_atual = 0
 		
-	atualizar_pagina()
+	atualizar_pagina(false)
 
 
-func atualizar_pagina():
+func atualizar_pagina(usar_fade: bool = true):
 	if pagina_atual < 0:
 		return
-		
+	
+	if usar_fade:
+		$Fade.reproduzir_animacao()
+		yield($Fade, "fade_in_finalizado")
+	
 	var id_animal = id_animais[pagina_atual]
 	var dados_animal = Globais.dados_animais[str(id_animal)]
 	
@@ -67,8 +71,12 @@ func _on_BotaoContinuar_pressed():
 
 
 func _on_BotaoIrParaJogo_pressed():
+	$Fade.reproduzir_animacao()
+	yield($Fade, "fade_in_finalizado")
 	var _err = get_tree().change_scene(CAMINHO_CENA_JOGO)
 
 
 func _on_BotaoIrMenuPrincipal_pressed():
+	$Fade.reproduzir_animacao()
+	yield($Fade, "fade_in_finalizado")
 	var _err = get_tree().change_scene(CAMINHO_MENU_INICIAL)

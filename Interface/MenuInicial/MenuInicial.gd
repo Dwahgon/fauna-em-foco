@@ -7,8 +7,6 @@ func _ready():
 	$AvisoEpilepsia.visible = true
 
 
-
-
 func _travar_botoes():
 	if botoes_travados:
 		return true
