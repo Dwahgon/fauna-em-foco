@@ -55,7 +55,7 @@ func _adicionar_foto(nome_imagem, objetos):
 		"animais": id_animais
 	})
 	
-func _process(delta):
+func _process(_delta):
 	$Interface/TempoRestante.text=str(int($Timer.time_left))
 	
 func _on_Timer_timeout():
