@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Interface/InterfaceJogo/Flash.gd" type="Script" id=1]
 [ext_resource path="res://Interface/InterfaceJogo/FitasRestantes.gd" type="Script" id=2]
+[ext_resource path="res://Assets/ComicGecko-GOaXO.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/Camera.png" type="Texture" id=4]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -35,6 +37,16 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
+[sub_resource type="DynamicFont" id=5]
+size = 36
+font_data = ExtResource( 3 )
+
+[sub_resource type="Theme" id=3]
+
+[sub_resource type="DynamicFont" id=4]
+size = 72
+font_data = ExtResource( 3 )
+
 [node name="Interface" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -53,10 +65,25 @@ script = ExtResource( 1 )
 anims/RESET = SubResource( 1 )
 anims/flash = SubResource( 2 )
 
+[node name="Camera" type="Sprite" parent="Flash"]
+position = Vector2( 1216, 64 )
+texture = ExtResource( 4 )
+
 [node name="FitasRestantes" type="Label" parent="."]
-margin_left = 5.0
-margin_top = 5.0
-margin_right = 40.0
-margin_bottom = 14.0
-text = "Fitas restantes: 00"
+margin_left = 1079.0
+margin_top = 40.0
+margin_right = 1194.0
+margin_bottom = 85.0
+custom_fonts/font = SubResource( 5 )
+text = "00/00"
+align = 2
 script = ExtResource( 2 )
+
+[node name="TempoRestante" type="Label" parent="."]
+margin_left = 640.0
+margin_top = 40.0
+margin_right = 640.0
+theme = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+text = "00"
+align = 1

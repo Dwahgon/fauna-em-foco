@@ -38,9 +38,15 @@ shape = SubResource( 2 )
 
 [node name="Interface" parent="." instance=ExtResource( 4 )]
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 30.0
+one_shot = true
+autostart = true
+
 [connection signal="fitas_restantes_atualizada" from="." to="Interface/FitasRestantes" method="atualizar_fitas_restantes"]
 [connection signal="foto_tirada" from="ViewportJogo/MundoJogo/MaquinaFotografica" to="." method="_on_MaquinaFotogrfica_foto_tirada"]
 [connection signal="foto_tirada" from="ViewportJogo/MundoJogo/MaquinaFotografica" to="Interface/Flash" method="_on_MaquinaFotogrfica_foto_tirada"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 
 [editable path="ViewportJogo/MundoJogo/SpawnAnimal"]
 [editable path="Interface"]

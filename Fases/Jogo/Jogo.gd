@@ -4,8 +4,6 @@ const CENA_POLAROID = preload("res://Polaroid/Polaroid.tscn")
 const CAMINHO_CENA_ALBUM_FOTOS = "res://Interface/AlbumFotos/AlbumFotos.tscn"
 const NOME_FOTO = "imagem%d"
 
-export (int) var quantidade_fitas := 10
-
 onready var maquina_fotografica = $ViewportJogo/MundoJogo/MaquinaFotografica
 
 var fitas_restantes: int
@@ -13,7 +11,7 @@ var fitas_restantes: int
 signal fitas_restantes_atualizada(qnt)
 
 func _ready():
-	fitas_restantes = quantidade_fitas
+	fitas_restantes = Globais.quantidade_fitas
 	emit_signal("fitas_restantes_atualizada", fitas_restantes)
 	Globais.fotos_tiradas.clear()
 	_atualizar_nome_foto()
@@ -34,7 +32,7 @@ func _on_MaquinaFotogrfica_foto_tirada(nome_imagem, _objetos_na_foto):
 
 
 func _atualizar_nome_foto():
-	maquina_fotografica.nome_foto = NOME_FOTO % (quantidade_fitas-fitas_restantes)
+	maquina_fotografica.nome_foto = NOME_FOTO % (Globais.quantidade_fitas-fitas_restantes)
 
 
 func _criar_polaroid(posicao, nome_imagem):
@@ -57,3 +55,8 @@ func _adicionar_foto(nome_imagem, objetos):
 		"animais": id_animais
 	})
 	
+func _process(delta):
+	$Interface/TempoRestante.text=str(int($Timer.time_left))
+	
+func _on_Timer_timeout():
+	var _err = get_tree().change_scene(CAMINHO_CENA_ALBUM_FOTOS)

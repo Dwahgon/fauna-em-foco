@@ -7,6 +7,7 @@ const MULTIPLICADOR_PONTO = 10
 var fotos_tiradas: Array = []
 var dados_animais: Dictionary
 
+var quantidade_fitas = 3
 
 func _ready():
 	_carregar_json()
