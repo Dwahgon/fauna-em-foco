@@ -187,18 +187,30 @@ stretch_mode = 6
 
 [node name="Separador" type="Control" parent="TelaAlbum/VBoxContainer/MargemBotoes/HBoxContainer"]
 margin_left = 74.0
-margin_right = 578.0
+margin_right = 511.0
 margin_bottom = 70.0
 size_flags_horizontal = 3
 
 [node name="BotaoIrParaJogo" type="Button" parent="TelaAlbum/VBoxContainer/MargemBotoes/HBoxContainer"]
-margin_left = 582.0
-margin_right = 677.0
+margin_left = 515.0
+margin_right = 610.0
 margin_bottom = 70.0
 text = "Jogar Denovo"
 
+[node name="Separador3" type="Control" parent="TelaAlbum/VBoxContainer/MargemBotoes/HBoxContainer"]
+margin_left = 614.0
+margin_right = 634.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 20, 0 )
+
+[node name="BotaoIrMenuPrincipal" type="Button" parent="TelaAlbum/VBoxContainer/MargemBotoes/HBoxContainer"]
+margin_left = 638.0
+margin_right = 745.0
+margin_bottom = 70.0
+text = "Menu Principal"
+
 [node name="Separador2" type="Control" parent="TelaAlbum/VBoxContainer/MargemBotoes/HBoxContainer"]
-margin_left = 681.0
+margin_left = 749.0
 margin_right = 1186.0
 margin_bottom = 70.0
 size_flags_horizontal = 3
@@ -301,5 +313,6 @@ text = "Tentar Novamente"
 
 [connection signal="pressed" from="TelaAlbum/VBoxContainer/MargemBotoes/HBoxContainer/BotaoVoltar" to="." method="_on_BotaoVoltar_pressed"]
 [connection signal="pressed" from="TelaAlbum/VBoxContainer/MargemBotoes/HBoxContainer/BotaoIrParaJogo" to="." method="_on_BotaoIrParaJogo_pressed"]
+[connection signal="pressed" from="TelaAlbum/VBoxContainer/MargemBotoes/HBoxContainer/BotaoIrMenuPrincipal" to="." method="_on_BotaoIrMenuPrincipal_pressed"]
 [connection signal="pressed" from="TelaAlbum/VBoxContainer/MargemBotoes/HBoxContainer/BotaoContinuar" to="." method="_on_BotaoContinuar_pressed"]
 [connection signal="pressed" from="TelaAlbumVazia/MargemConteudo/VBoxContainer/MarginContainer/HBoxContainer/BotaoIrParaJogo" to="." method="_on_BotaoIrParaJogo_pressed"]
