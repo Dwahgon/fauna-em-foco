@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Interface/InterfaceJogo.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Interface/InterfaceJogo/InterfaceJogo.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/icon.png" type="Texture" id=2]
 [ext_resource path="res://MaquinaFotografica/MaquinaFotografica.tscn" type="PackedScene" id=3]
 

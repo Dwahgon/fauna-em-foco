@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Interface/Flash.gd" type="Script" id=1]
-[ext_resource path="res://Interface/FitasRestantes.gd" type="Script" id=2]
+[ext_resource path="res://Interface/InterfaceJogo/Flash.gd" type="Script" id=1]
+[ext_resource path="res://Interface/InterfaceJogo/FitasRestantes.gd" type="Script" id=2]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
