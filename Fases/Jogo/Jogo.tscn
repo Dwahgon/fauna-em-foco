@@ -3,7 +3,7 @@
 [ext_resource path="res://Fases/Jogo/Jogo.gd" type="Script" id=1]
 [ext_resource path="res://Animais/Animal.tscn" type="PackedScene" id=2]
 [ext_resource path="res://MaquinaFotografica/MaquinaFotografica.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Interface/InterfaceJogo.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Interface/InterfaceJogo/InterfaceJogo.tscn" type="PackedScene" id=4]
 
 [sub_resource type="World" id=1]
 
@@ -24,13 +24,18 @@ render_target_update_mode = 3
 tamanho_foto = Vector2( 150, 90 )
 
 [node name="Animal" parent="ViewportJogo/MundoJogo" instance=ExtResource( 2 )]
+modulate = Color( 1, 0, 0, 1 )
 position = Vector2( 179, 120 )
 
 [node name="Animal2" parent="ViewportJogo/MundoJogo" instance=ExtResource( 2 )]
+modulate = Color( 0.054902, 1, 0, 1 )
 position = Vector2( 495, 289 )
+id_animal = 1
 
 [node name="Animal3" parent="ViewportJogo/MundoJogo" instance=ExtResource( 2 )]
+modulate = Color( 0.00784314, 0, 1, 1 )
 position = Vector2( 114, 306 )
+id_animal = 2
 
 [node name="Interface" parent="." instance=ExtResource( 4 )]
 

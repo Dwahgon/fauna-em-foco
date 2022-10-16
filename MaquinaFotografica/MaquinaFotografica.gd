@@ -20,9 +20,8 @@ func _process(_delta):
 		var retangulo_captura := Rect2(posicao_foto, tamanho_foto)
 		var imagem: Image = _viewport.get_texture().get_data().get_rect(retangulo_captura)
 		imagem.flip_y()
-		var _err := imagem.save_png("user://%s.png" % nome_foto)
+		var _err := imagem.save_png(Globais.CAMINHO_FOTO % nome_foto)
 		var objetos = $Area2D.get_overlapping_areas()
-		print(objetos)
 		emit_signal("foto_tirada", nome_foto, objetos)
 		
 	

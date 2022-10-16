@@ -15,7 +15,9 @@ func definir_imagem(img_path: String):
 	var imagem_textura = ImageTexture.new()
 	imagem_textura.create_from_image(img)
 	$Sprite.texture = imagem_textura
-	
+
+
+func animar_aparecendo():
 	$AnimationPlayer.play("tocar")
 
 

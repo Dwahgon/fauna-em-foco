@@ -13,6 +13,10 @@ config_version=4
 config/name="Gamejam-larva"
 config/icon="res://Assets/icon.png"
 
+[autoload]
+
+Globais="*res://AutoLoads/Globais.gd"
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
