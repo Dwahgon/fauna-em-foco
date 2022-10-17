@@ -1,92 +1,128 @@
 {
   "0": {
     "nome": "Anta",
-    "nivel": 1,
+    "nivel": 3,
+    "perigo":"Vulnerável",
+    "nome_cientifico":"Tapirus terrestris",
     "descricao": "O maior mamífero da América do Sul pode ser encontrado em todo país, embora esteja quase extinta na Caatinga. A anta é uma excelente nadadora e mergulha rapidamente quando se sente ameaçada. Na Amazônia, ela visita saleiros naturais para conseguir os alimentos que não obtém em sua dieta de folhas e frutos."
   },
   "1": {
     "nome": "Harpia",
-    "nivel": 0,
+    "nivel": 3,
+    "perigo":"Vulnerável",
+    "nome_cientifico":"Harpia harpyja",
     "descricao": "Com aproximadamente dois metros de envergadura de asas abertas e com garras do mesmo tamanho das de um urso-pardo, a harpia, também conhecida como gavião-real, é considerada a ave de rapina mais poderosa do mundo. Mesmo com esse tamanho todo, ela voa de maneira tranquila e habilidosa entre as árvores da floresta. Quando ela fecha suas garras, é capaz de exercer uma força de até 50 kg, esmagando os ossos de preguiças, macacos e aves de médio porte."
   },
   "2": {
     "nome": "Jacaretinga",
-    "nivel": 0,
+    "nivel": 1,
+    "perigo":"Pouco preocupante",
+    "nome_cientifico":"Caiman crocodilus",
     "descricao": "Quando pequenos estes jacarés alimentam-se de insetos, sapos e outros animais menores, mas na vida adulta costumam comer peixe. Para caçar seu alimento, eles agem de forma bastante preguiçosa: eles abrem a boca contra a correnteza e esperam que algum peixe simplesmente caia na armadilha."
   },
   "3": {
     "nome": "Arara-Canindé",
-    "nivel": 0,
+    "nivel": 1,
+    "perigo":"Pouco preocupante",
+    "nome_cientifico":"Ara ararauna",
     "descricao": "Se você nunca foi capaz de acreditar em amor perfeito, fique calmo, isso será resolvido agora. As araras-canindés – também conhecidas como araracanga, arara-vermelha, maracanã-guaçu ou maracanã-do-buriti – são daqueles animais verdadeiramente monogâmicos. Estas aves quando encontram seu par ficam unidas até que a morte as separe e, quando tal fatalidade ocorre, o parceiro solitário pode até morrer de depressão. Esta arara é o símbolo da união perfeita!"
   },
   "4": {
     "nome": "Onça-pintada",
-    "nivel": 0,
+    "nivel": 2,
+    "perigo":"Quase ameaçada",
+    "nome_cientifico":"Panthera onca",
     "descricao": "Falar em mata atlântica sem citar a onça-pintada é o mesmo que ir à praia e não ver o mar. Na Amazônia elas existem em menor quantidade que no Pantanal, devido à dificuldade de encontrar alimento por ali. Suas presas mais comuns são os animais jovens, idosos e doentes. As onças gostam de caçadas fáceis. Esse seu hábito acaba por contribuir para o equilíbrio da floresta. Ainda que benéficos para o equilíbrio da mata, esses felinos estão na lista de animais ameaçados de extinção, pois alguns fazendeiros costumam os abater para proteger seus rebanhos. Outro fator de risco para as onças é o desmatamento."
   },
   "5": {
     "nome": "Uacari-branco",
-    "nivel": 0,
+    "nivel": 3,
+    "perigo":"Vulnerável",
+    "nome_cientifico":"Cacajao calvus",
     "descricao": "Este macaco de rosto vermelho e pelo branco, capaz de saltar cerca de 30 metros na hora de passar de uma árvore a outra. Encontrado apenas em algumas partes da Amazônia. O uacari-branco recebeu dos cientistas o nome cacajao calvus calvus, já que a palavra calvo vem do latim calvus, que significa sem cabelo. O rosto vermelho da espécie por sua vez, pode ser um trunfo na hora em que o uacari-branco precisa encontrar um par. Esse macaco vive em bandos compostos por 50 animais e, na época da reprodução, nos meses de março e abril, quem tem o rosto mais vermelho chama a atenção e tem mais chance de encontrar um parceiro para ter filhotes, a cor vermelha do rosto é sinal de uma boa saúde."
   },
   "6": {
     "nome": "Mico-leão-dourado ",
-    "nivel": 0,
+    "nivel": 4,
+    "perigo":"Em perigo",
+    "nome_cientifico":"Leontopithecus rosalia",
     "descricao": "Um macaco do tamanho de um esquilo com um denso pelo dourado. Uma das razões pelas quais foi indiscriminadamente capturado é a sua grande beleza."
   },
   "7": {
     "nome": "Tatu-Canastra",
-    "nivel": 0,
+    "nivel": 3,
+    "perigo":"Vulnerável",
+    "nome_cientifico":"Priodontes maximus",
     "descricao": "Este mamífero com carapaça está listado como vulnerável. Além do desmatamento, a causa de sua diminuição é a caça para venda a colecionadores ou zoológicos."
   },
   "8": {
     "nome": "Ariranha",
-    "nivel": 0,
+    "nivel": 4,
+    "perigo":"Em perigo",
+    "nome_cientifico":"Pteronura brasiliensis",
     "descricao": "É a maior lontra fluvial conhecida. Existem atualmente menos de 5 000 indivíduos na natureza."
   },
   "9": {
     "nome": "Tamanduá-bandeira",
-    "nivel": 0,
+    "nivel": 3,
+    "perigo":"Vulnerável",
+    "nome_cientifico":"Myrmecophaga tridactyla",
     "descricao": "Também conhecido como yurumi, está listado como vulnerável. É perseguido por caçadores e cobiçado por colecionadores."
   },
   "10": {
     "nome": "Arara-azul-grande",
-    "nivel": 0,
+    "nivel": 3,
+    "perigo":"Vulnerável",
+    "nome_cientifico":"Anodorhynchus hyacinthinus",
     "descricao": "A  bela arara-azul é altamente valorizada no mercado. Isto é devido à sua utilização como animal de estimação e às suas cobiçadas penas. Estas são as principais razões da sua captura indiscriminada."
   },
   "11": {
     "nome": "Sapo-dourado",
-    "nivel": 0,
+    "nivel": 7,
+    "perigo":"Extinto",
+    "nome_cientifico":"Incilius periglenes",
     "descricao": "Como a maioria dos anfíbios, está em perigo de extinção devido à perda de zonas húmidas e a secas cada vez mais prolongadas."
   },
   "12": {
     "nome": "Falsa-coral",
-    "nivel": 0,
+    "nivel": 1,
+    "perigo":"Pouco preocupante",
+    "nome_cientifico":"Erythrolamprus aesculapii ",
     "descricao": "A cobra coral-verdadeira é bastante venenosa, já a falsa-coral não é tão perigosa. No entanto, o maior problema é que ambas são muito semelhantes, já que apresentam coloração parecida."
   },
   "13": {
     "nome": "Capivara",
-    "nivel": 0,
+    "nivel": 1,
+    "perigo":"Pouco preocupante",
+    "nome_cientifico":"Hydrochoerus hydrochaeris",
     "descricao": "A capivara é um animal mamífero que vive em grupos. Destaca-se por possuir corpo robusto, musculoso e coberto por uma pelagem, geralmente, marrom."
   },
   "14": {
     "nome": "Sagui-pigmeu",
-    "nivel": 0,
+    "nivel": 1,
+    "perigo":"Pouco preocupante",
+    "nome_cientifico":"Cebuella pygmaea",
     "descricao": "O sagui-pigmeu, também conhecido como sagui-leãozinho, é a menor espécie de símio conhecida, medindo apenas cerca de 15 centímetros de comprimento e pesando 130 gramas, de pelagem acastanhada."
   },
   "15": {
     "nome": "Basilisco marrom",
-    "nivel": 0,
+    "nivel": 1,
+    "perigo":"Pouco preocupante",
+    "nome_cientifico":"Basiliscus vittatus",
     "descricao": "Este réptil tem a incrível capacidade de caminhar sobre as águas. Graças à combinação do pouco peso, da baixa densidade corporal, da anatomia de suas patas traseiras (que possuem membranas entre os dedos) e da velocidade que este pequeno lagarto pode alcançar ao se mover"
   },
   "16": {
     "nome": "Jupará",
-    "nivel": 0,
+    "nivel": 1,
+    "perigo":"Pouco preocupante",
+    "nome_cientifico":"Potus flavus",
     "descricao": "É conhecido também como macaco da noite porque possui hábitos noturnos e pode resultar parecido a um mico. Mas na verdade, os juparás pertencem à mesma família dos guaxinins e dos quatis, e não têm parentescos com as espécies de macacos que habitam nas selvas brasileiras."
   },
   "17": {
     "nome": "Gato-maracaja",
-    "nivel": 0,
+    "nivel": 2,
+    "perigo":"Quase ameaçada",
+    "nome_cientifico":"Leopardus wiedii",
     "descricao": "O gato-maracajá prefere caçar andando na galhada de árvores e se alimenta de pequenos vertebrados, principalmente roedores e aves."
   }
 }
