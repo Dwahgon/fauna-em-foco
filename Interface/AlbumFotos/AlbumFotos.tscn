@@ -102,31 +102,106 @@ margin_bottom = 530.0
 size_flags_horizontal = 3
 custom_constants/margin_left = 5
 
-[node name="FundoDescricao" type="Panel" parent="TelaAlbum/VBoxContainer/MargemAlbum/HBoxContainer/MargemDescricao"]
+[node name="VBoxContainer" type="VBoxContainer" parent="TelaAlbum/VBoxContainer/MargemAlbum/HBoxContainer/MargemDescricao"]
 margin_left = 5.0
 margin_right = 584.0
 margin_bottom = 530.0
+size_flags_horizontal = 3
+
+[node name="FundoNomeCientifico" type="PanelContainer" parent="TelaAlbum/VBoxContainer/MargemAlbum/HBoxContainer/MargemDescricao/VBoxContainer"]
+margin_right = 579.0
+margin_bottom = 34.0
 custom_styles/panel = SubResource( 1 )
 
-[node name="MargemTextoDescricao" type="MarginContainer" parent="TelaAlbum/VBoxContainer/MargemAlbum/HBoxContainer/MargemDescricao"]
-margin_left = 5.0
-margin_right = 584.0
-margin_bottom = 530.0
+[node name="MargemNomeCientifico" type="MarginContainer" parent="TelaAlbum/VBoxContainer/MargemAlbum/HBoxContainer/MargemDescricao/VBoxContainer/FundoNomeCientifico"]
+margin_right = 579.0
+margin_bottom = 34.0
 custom_constants/margin_right = 10
 custom_constants/margin_top = 10
 custom_constants/margin_left = 10
 custom_constants/margin_bottom = 10
 
-[node name="TextoDescricao" type="Label" parent="TelaAlbum/VBoxContainer/MargemAlbum/HBoxContainer/MargemDescricao/MargemTextoDescricao"]
+[node name="TextoNomeCientifico" type="Label" parent="TelaAlbum/VBoxContainer/MargemAlbum/HBoxContainer/MargemDescricao/VBoxContainer/FundoNomeCientifico/MargemNomeCientifico"]
 unique_name_in_owner = true
 margin_left = 10.0
 margin_top = 10.0
 margin_right = 569.0
-margin_bottom = 520.0
+margin_bottom = 24.0
+size_flags_vertical = 3
+autowrap = true
+
+[node name="FundoPerigo" type="PanelContainer" parent="TelaAlbum/VBoxContainer/MargemAlbum/HBoxContainer/MargemDescricao/VBoxContainer"]
+margin_top = 38.0
+margin_right = 579.0
+margin_bottom = 72.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="MargemTextoPerigo" type="MarginContainer" parent="TelaAlbum/VBoxContainer/MargemAlbum/HBoxContainer/MargemDescricao/VBoxContainer/FundoPerigo"]
+margin_right = 579.0
+margin_bottom = 34.0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+
+[node name="TextoPerigo" type="Label" parent="TelaAlbum/VBoxContainer/MargemAlbum/HBoxContainer/MargemDescricao/VBoxContainer/FundoPerigo/MargemTextoPerigo"]
+unique_name_in_owner = true
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 569.0
+margin_bottom = 24.0
+size_flags_vertical = 3
+autowrap = true
+
+[node name="FundoDescricao" type="PanelContainer" parent="TelaAlbum/VBoxContainer/MargemAlbum/HBoxContainer/MargemDescricao/VBoxContainer"]
+margin_top = 76.0
+margin_right = 579.0
+margin_bottom = 301.0
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="MargemTextoDescricao" type="MarginContainer" parent="TelaAlbum/VBoxContainer/MargemAlbum/HBoxContainer/MargemDescricao/VBoxContainer/FundoDescricao"]
+margin_right = 579.0
+margin_bottom = 225.0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+
+[node name="TextoDescricao" type="Label" parent="TelaAlbum/VBoxContainer/MargemAlbum/HBoxContainer/MargemDescricao/VBoxContainer/FundoDescricao/MargemTextoDescricao"]
+unique_name_in_owner = true
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 569.0
+margin_bottom = 215.0
 size_flags_vertical = 3
 text = "fjasdklfjaklsdfasdfasdfjaskldfjklasjkldfjklajlksdfjkljklasdfjkljklasdjklfljkasjkldfjklasdfjkllajksdfjklajklsdfjlkaljksljkasddjklkkkkkkkkkkkkdfaklsdfjkasjkdfjkasjdkflaçsdjklf
 "
 autowrap = true
+
+[node name="FundoImagemReal" type="PanelContainer" parent="TelaAlbum/VBoxContainer/MargemAlbum/HBoxContainer/MargemDescricao/VBoxContainer"]
+margin_top = 305.0
+margin_right = 579.0
+margin_bottom = 530.0
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="MargemImagemReal" type="MarginContainer" parent="TelaAlbum/VBoxContainer/MargemAlbum/HBoxContainer/MargemDescricao/VBoxContainer/FundoImagemReal"]
+margin_right = 579.0
+margin_bottom = 225.0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+
+[node name="ImagemReal" type="TextureRect" parent="TelaAlbum/VBoxContainer/MargemAlbum/HBoxContainer/MargemDescricao/VBoxContainer/FundoImagemReal/MargemImagemReal"]
+unique_name_in_owner = true
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 569.0
+margin_bottom = 215.0
+expand = true
+stretch_mode = 6
 
 [node name="MarginContainer" type="MarginContainer" parent="TelaAlbum/VBoxContainer"]
 margin_top = 592.0
@@ -188,30 +263,30 @@ stretch_mode = 6
 
 [node name="Separador" type="Control" parent="TelaAlbum/VBoxContainer/MargemBotoes/HBoxContainer"]
 margin_left = 74.0
-margin_right = 511.0
+margin_right = 498.0
 margin_bottom = 70.0
 size_flags_horizontal = 3
 
 [node name="BotaoIrParaJogo" type="Button" parent="TelaAlbum/VBoxContainer/MargemBotoes/HBoxContainer"]
-margin_left = 515.0
-margin_right = 610.0
+margin_left = 502.0
+margin_right = 622.0
 margin_bottom = 70.0
-text = "Jogar Denovo"
+text = "Jogar Novamente"
 
 [node name="Separador3" type="Control" parent="TelaAlbum/VBoxContainer/MargemBotoes/HBoxContainer"]
-margin_left = 614.0
-margin_right = 634.0
+margin_left = 626.0
+margin_right = 646.0
 margin_bottom = 70.0
 rect_min_size = Vector2( 20, 0 )
 
 [node name="BotaoIrMenuPrincipal" type="Button" parent="TelaAlbum/VBoxContainer/MargemBotoes/HBoxContainer"]
-margin_left = 638.0
-margin_right = 745.0
+margin_left = 650.0
+margin_right = 757.0
 margin_bottom = 70.0
 text = "Menu Principal"
 
 [node name="Separador2" type="Control" parent="TelaAlbum/VBoxContainer/MargemBotoes/HBoxContainer"]
-margin_left = 749.0
+margin_left = 761.0
 margin_right = 1186.0
 margin_bottom = 70.0
 size_flags_horizontal = 3
@@ -313,7 +388,6 @@ rect_min_size = Vector2( 200, 0 )
 text = "Tentar Novamente"
 
 [node name="Fade" parent="." instance=ExtResource( 3 )]
-visible = false
 
 [connection signal="pressed" from="TelaAlbum/VBoxContainer/MargemBotoes/HBoxContainer/BotaoVoltar" to="." method="_on_BotaoVoltar_pressed"]
 [connection signal="pressed" from="TelaAlbum/VBoxContainer/MargemBotoes/HBoxContainer/BotaoIrParaJogo" to="." method="_on_BotaoIrParaJogo_pressed"]
