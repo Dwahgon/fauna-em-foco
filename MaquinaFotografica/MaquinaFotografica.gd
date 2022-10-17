@@ -13,7 +13,7 @@ func _ready():
 
 func _process(_delta):
 	position = get_global_mouse_position()
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("tirar_foto"):
 		var posicao_tela := get_global_transform_with_canvas().origin
 		var retangulo_viewport = get_viewport_rect()
 		var posicao_foto = Vector2(posicao_tela.x - tamanho_foto.x / 2, retangulo_viewport.size.y - posicao_tela.y - tamanho_foto.y / 2)
