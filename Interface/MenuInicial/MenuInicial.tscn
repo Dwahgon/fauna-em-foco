@@ -1,7 +1,16 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Interface/Fade.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Interface/MenuInicial/MenuInicial.gd" type="Script" id=2]
+[ext_resource path="res://Interface/tema.tres" type="Theme" id=3]
+[ext_resource path="res://Assets/Coiny-Regular.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=5]
+size = 72
+outline_size = 9
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 4 )
 
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.289062, 0.289062, 0.289062, 1 )
@@ -9,6 +18,7 @@ bg_color = Color( 0.289062, 0.289062, 0.289062, 1 )
 [node name="MenuInicial" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = ExtResource( 3 )
 script = ExtResource( 2 )
 
 [node name="MenuPrincipal" type="VBoxContainer" parent="."]
@@ -26,9 +36,10 @@ custom_constants/margin_bottom = 30
 
 [node name="Label" type="Label" parent="MenuPrincipal/MargemTitulo"]
 margin_left = 30.0
-margin_top = 172.0
+margin_top = 161.0
 margin_right = 1250.0
-margin_bottom = 186.0
+margin_bottom = 197.0
+custom_fonts/font = SubResource( 5 )
 text = "Fauna em Foco"
 align = 1
 
@@ -66,7 +77,7 @@ margin_right = 680.0
 margin_bottom = 162.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Creditos"
+text = "Créditos"
 
 [node name="Separador2" type="Control" parent="MenuPrincipal/MargemBotoes/VBoxContainer"]
 margin_top = 166.0
@@ -92,8 +103,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="MargemTitulo" type="MarginContainer" parent="MenuCreditos/VBoxContainer"]
-margin_right = 1024.0
-margin_bottom = 114.0
+margin_right = 1280.0
+margin_bottom = 118.0
 custom_constants/margin_right = 30
 custom_constants/margin_top = 30
 custom_constants/margin_left = 30
@@ -102,15 +113,15 @@ custom_constants/margin_bottom = 30
 [node name="Panel" type="Panel" parent="MenuCreditos/VBoxContainer/MargemTitulo"]
 margin_left = 30.0
 margin_top = 30.0
-margin_right = 994.0
-margin_bottom = 84.0
+margin_right = 1250.0
+margin_bottom = 88.0
 custom_styles/panel = SubResource( 4 )
 
 [node name="MarginContainer" type="MarginContainer" parent="MenuCreditos/VBoxContainer/MargemTitulo"]
 margin_left = 30.0
 margin_top = 30.0
-margin_right = 994.0
-margin_bottom = 84.0
+margin_right = 1250.0
+margin_bottom = 88.0
 custom_constants/margin_right = 20
 custom_constants/margin_top = 20
 custom_constants/margin_left = 20
@@ -119,15 +130,15 @@ custom_constants/margin_bottom = 20
 [node name="Label" type="Label" parent="MenuCreditos/VBoxContainer/MargemTitulo/MarginContainer"]
 margin_left = 20.0
 margin_top = 20.0
-margin_right = 944.0
-margin_bottom = 34.0
+margin_right = 1200.0
+margin_bottom = 38.0
 text = "Creditos"
 align = 1
 
 [node name="MargemConteudo" type="MarginContainer" parent="MenuCreditos/VBoxContainer"]
-margin_top = 118.0
-margin_right = 1024.0
-margin_bottom = 506.0
+margin_top = 122.0
+margin_right = 1280.0
+margin_bottom = 626.0
 size_flags_vertical = 3
 custom_constants/margin_right = 100
 custom_constants/margin_left = 100
@@ -135,14 +146,14 @@ custom_constants/margin_bottom = 30
 
 [node name="Panel" type="Panel" parent="MenuCreditos/VBoxContainer/MargemConteudo"]
 margin_left = 100.0
-margin_right = 924.0
-margin_bottom = 358.0
+margin_right = 1180.0
+margin_bottom = 474.0
 custom_styles/panel = SubResource( 4 )
 
 [node name="MargemCreditos" type="MarginContainer" parent="MenuCreditos/VBoxContainer/MargemConteudo"]
 margin_left = 100.0
-margin_right = 924.0
-margin_bottom = 358.0
+margin_right = 1180.0
+margin_bottom = 474.0
 custom_constants/margin_right = 30
 custom_constants/margin_top = 30
 custom_constants/margin_left = 30
@@ -151,8 +162,8 @@ custom_constants/margin_bottom = 30
 [node name="RichTextLabel" type="RichTextLabel" parent="MenuCreditos/VBoxContainer/MargemConteudo/MargemCreditos"]
 margin_left = 30.0
 margin_top = 30.0
-margin_right = 794.0
-margin_bottom = 328.0
+margin_right = 1050.0
+margin_bottom = 444.0
 text = "Ana Eloina Kraus:
 	- Arte
 
@@ -169,22 +180,22 @@ Jezreel Moraes
 	- Ideias"
 
 [node name="MargemBotoes" type="MarginContainer" parent="MenuCreditos/VBoxContainer"]
-margin_top = 510.0
-margin_right = 1024.0
-margin_bottom = 600.0
+margin_top = 630.0
+margin_right = 1280.0
+margin_bottom = 720.0
 custom_constants/margin_right = 30
 custom_constants/margin_left = 30
 custom_constants/margin_bottom = 30
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MenuCreditos/VBoxContainer/MargemBotoes"]
 margin_left = 30.0
-margin_right = 994.0
+margin_right = 1250.0
 margin_bottom = 60.0
 alignment = 1
 
 [node name="VoltarCreditos" type="Button" parent="MenuCreditos/VBoxContainer/MargemBotoes/HBoxContainer"]
-margin_left = 432.0
-margin_right = 532.0
+margin_left = 560.0
+margin_right = 660.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 100, 60 )
 text = "Voltar"
@@ -199,10 +210,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="TextoAviso" type="Label" parent="AvisoEpilepsia/CenterContainer"]
-margin_left = 311.0
-margin_top = 327.0
-margin_right = 969.0
-margin_bottom = 392.0
+margin_left = 211.0
+margin_top = 319.0
+margin_right = 1068.0
+margin_bottom = 400.0
 text = "AVISO: LEIA ANTES DE JOGAR!
 
 Esse jogo não é indicado para pessoas com epilepsia por conter efeitos que podem causar convulsões,
