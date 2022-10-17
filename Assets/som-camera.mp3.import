@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/som-camera.mp3-b0110b8f45ff6814334ec6eb81fdc7fa.mp3str"
+
+[deps]
+
+source_file="res://Assets/som-camera.mp3"
+dest_files=[ "res://.import/som-camera.mp3-b0110b8f45ff6814334ec6eb81fdc7fa.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
