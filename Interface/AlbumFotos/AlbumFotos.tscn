@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Interface/AlbumFotos/SetaEsquerda.png" type="Texture" id=1]
 [ext_resource path="res://Interface/AlbumFotos/AlbumFotos.gd" type="Script" id=2]
 [ext_resource path="res://Interface/Fade.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Interface/tema.tres" type="Theme" id=4]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.290196, 0.290196, 0.290196, 1 )
@@ -10,6 +11,7 @@ bg_color = Color( 0.290196, 0.290196, 0.290196, 1 )
 [node name="AlbumFotos" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = ExtResource( 4 )
 script = ExtResource( 2 )
 
 [node name="TelaAlbum" type="Panel" parent="."]
@@ -22,7 +24,7 @@ anchor_bottom = 1.0
 
 [node name="MargemBarraTitulo" type="MarginContainer" parent="TelaAlbum/VBoxContainer"]
 margin_right = 1280.0
-margin_bottom = 54.0
+margin_bottom = 48.0
 custom_constants/margin_right = 10
 custom_constants/margin_top = 10
 custom_constants/margin_left = 10
@@ -32,14 +34,14 @@ custom_constants/margin_bottom = 10
 margin_left = 10.0
 margin_top = 10.0
 margin_right = 1270.0
-margin_bottom = 44.0
+margin_bottom = 38.0
 custom_styles/panel = SubResource( 1 )
 
 [node name="MargemTextoTitulo" type="MarginContainer" parent="TelaAlbum/VBoxContainer/MargemBarraTitulo"]
 margin_left = 10.0
 margin_top = 10.0
 margin_right = 1270.0
-margin_bottom = 44.0
+margin_bottom = 38.0
 custom_constants/margin_right = 10
 custom_constants/margin_top = 10
 custom_constants/margin_left = 10
@@ -50,14 +52,14 @@ unique_name_in_owner = true
 margin_left = 10.0
 margin_top = 10.0
 margin_right = 1250.0
-margin_bottom = 24.0
+margin_bottom = 18.0
 text = "Nome do animal aqui"
 align = 1
 
 [node name="MargemAlbum" type="MarginContainer" parent="TelaAlbum/VBoxContainer"]
-margin_top = 58.0
+margin_top = 52.0
 margin_right = 1280.0
-margin_bottom = 588.0
+margin_bottom = 594.0
 size_flags_vertical = 3
 custom_constants/margin_right = 10
 custom_constants/margin_left = 10
@@ -65,22 +67,22 @@ custom_constants/margin_left = 10
 [node name="HBoxContainer" type="HBoxContainer" parent="TelaAlbum/VBoxContainer/MargemAlbum"]
 margin_left = 10.0
 margin_right = 1270.0
-margin_bottom = 530.0
+margin_bottom = 542.0
 size_flags_vertical = 3
 
 [node name="MargemFotos" type="MarginContainer" parent="TelaAlbum/VBoxContainer/MargemAlbum/HBoxContainer"]
 margin_right = 672.0
-margin_bottom = 530.0
+margin_bottom = 542.0
 size_flags_horizontal = 3
 
 [node name="FundoFotos" type="Panel" parent="TelaAlbum/VBoxContainer/MargemAlbum/HBoxContainer/MargemFotos"]
 margin_right = 672.0
-margin_bottom = 530.0
+margin_bottom = 542.0
 custom_styles/panel = SubResource( 1 )
 
 [node name="MargemFotosItens" type="MarginContainer" parent="TelaAlbum/VBoxContainer/MargemAlbum/HBoxContainer/MargemFotos"]
 margin_right = 672.0
-margin_bottom = 530.0
+margin_bottom = 542.0
 rect_min_size = Vector2( 672, 0 )
 custom_constants/margin_right = 10
 custom_constants/margin_top = 10
@@ -92,30 +94,30 @@ unique_name_in_owner = true
 margin_left = 10.0
 margin_top = 10.0
 margin_right = 662.0
-margin_bottom = 520.0
+margin_bottom = 532.0
 columns = 4
 
 [node name="MargemDescricao" type="MarginContainer" parent="TelaAlbum/VBoxContainer/MargemAlbum/HBoxContainer"]
 margin_left = 676.0
 margin_right = 1260.0
-margin_bottom = 530.0
+margin_bottom = 542.0
 size_flags_horizontal = 3
 custom_constants/margin_left = 5
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TelaAlbum/VBoxContainer/MargemAlbum/HBoxContainer/MargemDescricao"]
 margin_left = 5.0
 margin_right = 584.0
-margin_bottom = 530.0
+margin_bottom = 542.0
 size_flags_horizontal = 3
 
 [node name="FundoNomeCientifico" type="PanelContainer" parent="TelaAlbum/VBoxContainer/MargemAlbum/HBoxContainer/MargemDescricao/VBoxContainer"]
 margin_right = 579.0
-margin_bottom = 34.0
+margin_bottom = 28.0
 custom_styles/panel = SubResource( 1 )
 
 [node name="MargemNomeCientifico" type="MarginContainer" parent="TelaAlbum/VBoxContainer/MargemAlbum/HBoxContainer/MargemDescricao/VBoxContainer/FundoNomeCientifico"]
 margin_right = 579.0
-margin_bottom = 34.0
+margin_bottom = 28.0
 custom_constants/margin_right = 10
 custom_constants/margin_top = 10
 custom_constants/margin_left = 10
@@ -126,19 +128,19 @@ unique_name_in_owner = true
 margin_left = 10.0
 margin_top = 10.0
 margin_right = 569.0
-margin_bottom = 24.0
+margin_bottom = 18.0
 size_flags_vertical = 3
 autowrap = true
 
 [node name="FundoPerigo" type="PanelContainer" parent="TelaAlbum/VBoxContainer/MargemAlbum/HBoxContainer/MargemDescricao/VBoxContainer"]
-margin_top = 38.0
+margin_top = 32.0
 margin_right = 579.0
-margin_bottom = 72.0
+margin_bottom = 60.0
 custom_styles/panel = SubResource( 1 )
 
 [node name="MargemTextoPerigo" type="MarginContainer" parent="TelaAlbum/VBoxContainer/MargemAlbum/HBoxContainer/MargemDescricao/VBoxContainer/FundoPerigo"]
 margin_right = 579.0
-margin_bottom = 34.0
+margin_bottom = 28.0
 custom_constants/margin_right = 10
 custom_constants/margin_top = 10
 custom_constants/margin_left = 10
@@ -149,12 +151,12 @@ unique_name_in_owner = true
 margin_left = 10.0
 margin_top = 10.0
 margin_right = 569.0
-margin_bottom = 24.0
+margin_bottom = 18.0
 size_flags_vertical = 3
 autowrap = true
 
 [node name="FundoDescricao" type="PanelContainer" parent="TelaAlbum/VBoxContainer/MargemAlbum/HBoxContainer/MargemDescricao/VBoxContainer"]
-margin_top = 76.0
+margin_top = 64.0
 margin_right = 579.0
 margin_bottom = 301.0
 size_flags_vertical = 3
@@ -162,7 +164,7 @@ custom_styles/panel = SubResource( 1 )
 
 [node name="MargemTextoDescricao" type="MarginContainer" parent="TelaAlbum/VBoxContainer/MargemAlbum/HBoxContainer/MargemDescricao/VBoxContainer/FundoDescricao"]
 margin_right = 579.0
-margin_bottom = 225.0
+margin_bottom = 237.0
 custom_constants/margin_right = 10
 custom_constants/margin_top = 10
 custom_constants/margin_left = 10
@@ -173,7 +175,7 @@ unique_name_in_owner = true
 margin_left = 10.0
 margin_top = 10.0
 margin_right = 569.0
-margin_bottom = 215.0
+margin_bottom = 227.0
 size_flags_vertical = 3
 text = "fjasdklfjaklsdfasdfasdfjaskldfjklasjkldfjklajlksdfjkljklasdfjkljklasdjklfljkasjkldfjklasdfjkllajksdfjklajklsdfjlkaljksljkasddjklkkkkkkkkkkkkdfaklsdfjkasjkdfjkasjdkflaçsdjklf
 "
@@ -182,13 +184,13 @@ autowrap = true
 [node name="FundoImagemReal" type="PanelContainer" parent="TelaAlbum/VBoxContainer/MargemAlbum/HBoxContainer/MargemDescricao/VBoxContainer"]
 margin_top = 305.0
 margin_right = 579.0
-margin_bottom = 530.0
+margin_bottom = 542.0
 size_flags_vertical = 3
 custom_styles/panel = SubResource( 1 )
 
 [node name="MargemImagemReal" type="MarginContainer" parent="TelaAlbum/VBoxContainer/MargemAlbum/HBoxContainer/MargemDescricao/VBoxContainer/FundoImagemReal"]
 margin_right = 579.0
-margin_bottom = 225.0
+margin_bottom = 237.0
 custom_constants/margin_right = 10
 custom_constants/margin_top = 10
 custom_constants/margin_left = 10
@@ -199,12 +201,12 @@ unique_name_in_owner = true
 margin_left = 10.0
 margin_top = 10.0
 margin_right = 569.0
-margin_bottom = 215.0
+margin_bottom = 227.0
 expand = true
 stretch_mode = 6
 
 [node name="MarginContainer" type="MarginContainer" parent="TelaAlbum/VBoxContainer"]
-margin_top = 592.0
+margin_top = 598.0
 margin_right = 1280.0
 margin_bottom = 626.0
 custom_constants/margin_top = 10
@@ -214,7 +216,7 @@ custom_constants/margin_bottom = 10
 unique_name_in_owner = true
 margin_top = 10.0
 margin_right = 1280.0
-margin_bottom = 24.0
+margin_bottom = 18.0
 text = "Sua pontuação: 100000 pontos"
 align = 1
 
@@ -263,30 +265,30 @@ stretch_mode = 6
 
 [node name="Separador" type="Control" parent="TelaAlbum/VBoxContainer/MargemBotoes/HBoxContainer"]
 margin_left = 74.0
-margin_right = 498.0
+margin_right = 463.0
 margin_bottom = 70.0
 size_flags_horizontal = 3
 
 [node name="BotaoIrParaJogo" type="Button" parent="TelaAlbum/VBoxContainer/MargemBotoes/HBoxContainer"]
-margin_left = 502.0
-margin_right = 622.0
+margin_left = 467.0
+margin_right = 630.0
 margin_bottom = 70.0
 text = "Jogar Novamente"
 
 [node name="Separador3" type="Control" parent="TelaAlbum/VBoxContainer/MargemBotoes/HBoxContainer"]
-margin_left = 626.0
-margin_right = 646.0
+margin_left = 634.0
+margin_right = 654.0
 margin_bottom = 70.0
 rect_min_size = Vector2( 20, 0 )
 
 [node name="BotaoIrMenuPrincipal" type="Button" parent="TelaAlbum/VBoxContainer/MargemBotoes/HBoxContainer"]
-margin_left = 650.0
-margin_right = 757.0
+margin_left = 658.0
+margin_right = 793.0
 margin_bottom = 70.0
 text = "Menu Principal"
 
 [node name="Separador2" type="Control" parent="TelaAlbum/VBoxContainer/MargemBotoes/HBoxContainer"]
-margin_left = 761.0
+margin_left = 797.0
 margin_right = 1186.0
 margin_bottom = 70.0
 size_flags_horizontal = 3
@@ -353,7 +355,7 @@ custom_constants/margin_bottom = 10
 [node name="HBoxContainer" type="VBoxContainer" parent="TelaAlbumVazia/MargemConteudo/VBoxContainer/PainelTexto/MarginContainer"]
 margin_left = 10.0
 margin_top = 10.0
-margin_right = 974.0
+margin_right = 1067.0
 margin_bottom = 516.0
 
 [node name="Label" type="Label" parent="TelaAlbumVazia/MargemConteudo/VBoxContainer/PainelTexto/MarginContainer/HBoxContainer"]
