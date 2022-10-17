@@ -16,19 +16,23 @@ func _ready():
 	Globais.fotos_tiradas.clear()
 	_atualizar_nome_foto()
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	$Interface/Fade.reproduzir_fadeout()
 
 
 func _on_MaquinaFotogrfica_foto_tirada(nome_imagem, _objetos_na_foto):
-	fitas_restantes = int(clamp(fitas_restantes - 1, 0, fitas_restantes))
-	
-	_atualizar_nome_foto()
-	emit_signal("fitas_restantes_atualizada", fitas_restantes)
-	
-	_adicionar_foto(nome_imagem, _objetos_na_foto)
-	
-	_criar_polaroid(maquina_fotografica.position, nome_imagem)
-	if fitas_restantes == 0:
-		var _err = get_tree().change_scene(CAMINHO_CENA_ALBUM_FOTOS)
+	if fitas_restantes > 0:
+		fitas_restantes = int(clamp(fitas_restantes - 1, 0, fitas_restantes))
+		
+		_atualizar_nome_foto()
+		emit_signal("fitas_restantes_atualizada", fitas_restantes)
+		
+		_adicionar_foto(nome_imagem, _objetos_na_foto)
+		
+		_criar_polaroid(maquina_fotografica.position, nome_imagem)
+		if fitas_restantes == 0:
+			$Interface/Fade.reproduzir_animacao()
+			yield($Interface/Fade, "fade_in_finalizado")
+			var _err = get_tree().change_scene(CAMINHO_CENA_ALBUM_FOTOS)
 
 
 func _atualizar_nome_foto():

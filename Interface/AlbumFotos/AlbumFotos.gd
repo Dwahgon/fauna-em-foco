@@ -34,6 +34,7 @@ func _ready():
 		pagina_atual = 0
 		
 	atualizar_pagina(false)
+	$Fade.reproduzir_fadeout()
 
 
 func atualizar_pagina(usar_fade: bool = true):

@@ -23,6 +23,4 @@ func _process(_delta):
 		var _err := imagem.save_png(Globais.CAMINHO_FOTO % nome_foto)
 		var objetos = $Area2D.get_overlapping_areas()
 		emit_signal("foto_tirada", nome_foto, objetos)
-		
-	
-	
+		$SomFoto.play()

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/som-fundo.mp3-d575419446283d3b6061b63e6b0a705e.mp3str"
+
+[deps]
+
+source_file="res://Assets/som-fundo.mp3"
+dest_files=[ "res://.import/som-fundo.mp3-d575419446283d3b6061b63e6b0a705e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

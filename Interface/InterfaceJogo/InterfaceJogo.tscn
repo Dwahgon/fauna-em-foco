@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Interface/InterfaceJogo/Flash.gd" type="Script" id=1]
 [ext_resource path="res://Interface/InterfaceJogo/FitasRestantes.gd" type="Script" id=2]
 [ext_resource path="res://Assets/ComicGecko-GOaXO.otf" type="DynamicFontData" id=3]
 [ext_resource path="res://Assets/Camera.png" type="Texture" id=4]
+[ext_resource path="res://Interface/Fade.tscn" type="PackedScene" id=5]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -39,12 +40,16 @@ tracks/0/keys = {
 
 [sub_resource type="DynamicFont" id=5]
 size = 36
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 3 )
 
 [sub_resource type="Theme" id=3]
 
 [sub_resource type="DynamicFont" id=4]
 size = 72
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 3 )
 
 [node name="Interface" type="Control"]
@@ -90,3 +95,5 @@ theme = SubResource( 3 )
 custom_fonts/font = SubResource( 4 )
 text = "00"
 align = 1
+
+[node name="Fade" parent="." instance=ExtResource( 5 )]
