@@ -1,6 +1,9 @@
 extends Control
 
 const NODE_TEXTO_DESCRICAO = "%TextoDescricao"
+const NODE_TEXTO_PERIGO = "%TextoPerigo"
+const NODE_TEXTO_NOME_CIENTIFICO = "%TextoNomeCientifico"
+const NODE_IMAGEM_REAL = "%ImagemReal"
 const NODE_TEXTO_TITULO = "%TextoTitulo"
 const NODE_BOTAO_VOLTAR = "%BotaoVoltar"
 const NODE_BOTAO_CONTINUAR = "%BotaoContinuar"
@@ -48,6 +51,9 @@ func atualizar_pagina(usar_fade: bool = true):
 	get_node(NODE_TEXTO_DESCRICAO).text = dados_animal["descricao"]
 	get_node(NODE_BOTAO_VOLTAR).disabled = pagina_atual <= 0
 	get_node(NODE_BOTAO_CONTINUAR).disabled = pagina_atual >= id_animais.size() - 1
+	get_node(NODE_TEXTO_PERIGO).text = "Nível de perigo: %s" % dados_animal["perigo"]
+	get_node(NODE_TEXTO_NOME_CIENTIFICO).text = "Nome científico: %s" % dados_animal["nome_cientifico"]
+	get_node(NODE_IMAGEM_REAL).texture = load("res://Assets/RealPhotos/%s.jpg" % dados_animal["nome"])
 	
 	for filho in get_node(NODE_GRADE_FOTOS).get_children():
 		filho.queue_free()

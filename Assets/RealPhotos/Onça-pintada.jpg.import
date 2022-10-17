@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Onça-pintada.JPG-9850346180092c5f25317d9dfac94f2e.stex"
+path="res://.import/Onça-pintada.jpg-5ac4bba4328c11a0f48657d8c5254411.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/RealPhotos/Onça-pintada.JPG"
-dest_files=[ "res://.import/Onça-pintada.JPG-9850346180092c5f25317d9dfac94f2e.stex" ]
+source_file="res://Assets/RealPhotos/Onça-pintada.jpg"
+dest_files=[ "res://.import/Onça-pintada.jpg-5ac4bba4328c11a0f48657d8c5254411.stex" ]
 
 [params]
 
