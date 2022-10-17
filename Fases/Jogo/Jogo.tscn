@@ -28,7 +28,7 @@ tamanho_foto = Vector2( 150, 90 )
 
 [node name="SpawnAnimal" parent="ViewportJogo/MundoJogo" instance=ExtResource( 2 )]
 position = Vector2( 600, 350 )
-animais_spawnaveis = [ 1, 2, 5, 10, 11, 12, 13, 15, 16, 17 ]
+animais_spawnaveis = [ 1, 2, 3, 5, 10, 11, 12, 13, 15, 16, 17 ]
 min_max_tempo_spawn = Vector2( 2, 10 )
 min_max_tempo_desaparecer = Vector2( 1, 4 )
 min_max_spawn_por_rodada = Vector2( 1, 3 )
